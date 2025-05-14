@@ -1,3 +1,8 @@
 let greetings: string = 'Hello, World!'
 
-console.log(greetings);
+let lw = greetings.toLocaleLowerCase()
+
+console.log(lw);
+
+
+//export {}
