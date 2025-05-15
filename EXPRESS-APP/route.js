@@ -3,7 +3,7 @@ import {userLogin, userSignup} from './controller.js';
 
 const router = express.Router();
 
-router.get('/user/login', userLogin)
-router.get('/user/signup', userSignup)
+router.get('/login', userLogin)
+router.get('/signup', userSignup)
 
 export default router;
