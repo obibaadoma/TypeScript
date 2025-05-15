@@ -1,4 +1,6 @@
 import express from 'express';
+import {userLogin, userSignup,usernameController, searchController} from './controller.js';
+import router from './route.js';
 
 const app = express();
 
@@ -10,13 +12,11 @@ app.get('/', (req, res) => {
   res.send('Hello Express!!!!!');
 })
 
-app.get('/about', (req, res) => {
-  res.send('About route');
-})
+app.get('search', searchController);
 
-app.get('/contact', (req, res) => {
-  res.send('Contact route');
-})
+// query a string
+
+app.use('/user', router);
 
 app.listen(PORT, ()=>{
   console.log(`Server is running on http://localhost:${PORT}`);
